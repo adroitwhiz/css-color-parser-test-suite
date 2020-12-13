@@ -247,7 +247,7 @@ for (const test of allTests) {
     const row = [test.msg, JSON.stringify(test.input), test.isLevel4 ? '✓' : ''];
 
     for (const f of testedFunctions) {
-        row.push(fails.some(fail => fail.func === f.name) ? c.bold.red('❌') : c.bold.green('✅'));
+        row.push(fails.some(fail => fail.func === f.name) ? c.bold.red('❌') : c.bold.green('✔️'));
     }
 
     rows.push(row);
