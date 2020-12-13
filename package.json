@@ -1,0 +1,27 @@
+{
+  "name": "css-color-parser-test-suite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-colors": "^4.1.1",
+    "canvas": "^2.6.1",
+    "collit": "^1.0.1",
+    "color-parse": "^1.4.2",
+    "cssstyle": "^2.3.0",
+    "paper-jsdom": "^0.12.11",
+    "parse-color": "^1.0.0",
+    "table": "^6.0.4",
+    "tinycolor2": "^1.4.2",
+    "color-string": "^1.5.4",
+    "polished": "^4.0.5",
+    "css-color-parser": "github:adroitwhiz/css-color-parser"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make-table": "node index.js > table.md"
+  },
+  "author": "",
+  "license": "ISC"
+}
