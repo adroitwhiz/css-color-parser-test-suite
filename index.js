@@ -1,12 +1,11 @@
 const {table} = require('table');
-const c = require('ansi-colors');
 
 const colorString = require('color-string');
 const parseColor = require('parse-color');
 const colorParse = require('color-parse');
+const {createCanvas} = require('canvas');
 const paper = require('paper-jsdom');
 const tinycolor = require('tinycolor2');
-const {createCanvas} = require('canvas');
 const {CSSStyleDeclaration} = require('cssstyle');
 const Collit = require('collit');
 const {parseToHsl, parseToRgb} = require('polished');
