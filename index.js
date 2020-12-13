@@ -131,6 +131,13 @@ const testedFunctions = [
         func: str => {
             const result = new paper.Color(str);
 
+            if (
+                result.components.length === 3 &&
+                result.components[0] === 0 &&
+                result.components[1] === 0 &&
+                result.components[2] === 0
+            ) return null;
+
             return {
                 model: result.type,
                 value: result.type === 'rgb' ?
