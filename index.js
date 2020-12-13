@@ -1,4 +1,8 @@
 const {table} = require('table');
+const c = require('ansi-colors');
+
+const tty = require('tty');
+c.enabled = tty.isatty(process.stdout.fd);
 
 const colorString = require('color-string');
 const parseColor = require('parse-color');
@@ -236,7 +240,7 @@ for (const test of allTests) {
     const row = [test.msg, JSON.stringify(test.input), test.isLevel4 ? '✓' : ''];
 
     for (const f of testedFunctions) {
-        row.push(fails.some(fail => fail.func === f.name) ? '❌' : '✅');
+        row.push(fails.some(fail => fail.func === f.name) ? c.bold.red('❌') : c.bold.green('✅'));
     }
 
     rows.push(row);
