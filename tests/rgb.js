@@ -63,6 +63,10 @@ const tests = test => {
     test('rgb(\t132,\t170,\t73\t)', {model: 'rgb', value: [132, 170, 73, 1]}, 'rgb() with tabs');
     test('rgba(132, 170, 73, 1, 0.5)', null, 'rgba() with too many components');
     test('rgba(132, 170)', null, 'rgba() with not enough components');
+    test('rgb(132, 170, 73, 1, 0.5)', null, 'rgb() with too many components');
+    test('rgb(132, 170)', null, 'rgb() with not enough components');
+    test('rgb 132, 170, 73', null, 'rgb with no parentheses');
+    test('rgb132,170,73', null, 'rgb with no parentheses or spaces');
     test('rgb (132, 170, 73)', null, 'rgb () with space before opening parenthesis');
     test('rgb(132, 170, 73)garbage', null, 'rgb() with extra garbage after');
     test('rgb(5%, 50, 30%)', null, 'rgb() with mixed percentages/numbers');
