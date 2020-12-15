@@ -58,7 +58,7 @@ const testedFunctions = [
         func: str => {
             const result = colorParse(str);
 
-            if (result === null) return null;
+            if (!result.space) return null;
 
             return {
                 model: result.space,
