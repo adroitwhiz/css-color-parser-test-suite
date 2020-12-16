@@ -77,6 +77,7 @@ const tests = test => {
     test('RgB(132, 170, 73)', {model: 'rgb', value: [132, 170, 73, 1]}, 'RgB() in mixed case');
     test('rgba(132, 170, 73, 5e-1)', {model: 'rgb', value: [132, 170, 73, 0.5]}, 'rgba() with scientific notation alpha');
     test('rgb(132 170 73 0.5)', null, 'rgb() with no commas and no slash before alpha', {isLevel4: true});
+    test('rgb(132 / 170 / 73 / 0.5)', null, 'rgb() with all slashes', {isLevel4: true});
 };
 
 module.exports = tests;
