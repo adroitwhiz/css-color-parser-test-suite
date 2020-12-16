@@ -58,6 +58,7 @@ const tests = test => {
     test('rgb(30e+0%, 57000e-3%, 4e+1%)', {model: 'rgb', value: [77, 145, 102, 1]}, 'rgb() with scientific notation percentages');
     test('rgb(128, 192, 64', {model: 'rgb', value: [128, 192, 64, 1]}, 'rgb() with missing close-paren');
     test('rgb(   132,    170, 73    )', {model: 'rgb', value: [132, 170, 73, 1]}, 'rgb() with extra spaces inside parentheses');
+    test('rgb(132 , 170 , 73)', {model: 'rgb', value: [132, 170, 73, 1]}, 'rgb() with spaces before commas');
     test('rgb(132,170,73)', {model: 'rgb', value: [132, 170, 73, 1]}, 'rgb() with commas but no spaces');
     test('rgb(\n132,\n170,\n73\n)', {model: 'rgb', value: [132, 170, 73, 1]}, 'rgb() with newlines');
     test('rgb(\t132,\t170,\t73\t)', {model: 'rgb', value: [132, 170, 73, 1]}, 'rgb() with tabs');
