@@ -73,8 +73,9 @@ const testedFunctions = [
         func: str => {
             const result = tinycolor(str);
 
+            if (!result.isValid()) return null;
             let colorFormat = result.getFormat();
-            if (colorFormat === 'name' || colorFormat === 'hex') colorFormat = 'rgb';
+            if (colorFormat === 'name' || (colorFormat && colorFormat.startsWith('hex')) || colorFormat === 'prgb') colorFormat = 'rgb';
 
             let value;
 
