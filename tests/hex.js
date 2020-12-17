@@ -11,6 +11,8 @@ const tests = test => {
     test('#ff000', null, '5-digit hex');
     test('#ffz000', null, 'hex with invalid character replaced');
     test('#fffz000', null, 'hex with invalid character inserted');
+    test('##fff000', null, 'hex with two hash marks');
+    test('fff000', null, 'hex with no hash mark');
 };
 
 module.exports = tests;
