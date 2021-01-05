@@ -200,6 +200,7 @@ const testedFunctions = [
         func: str => {
             return myParser((model, ...value) => {
                 if (model === null) return null;
+                if (model === 'hex' || model === 'keyword') model = 'rgb';
                 return {
                     model,
                     value
